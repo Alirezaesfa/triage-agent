@@ -63,7 +63,7 @@ print("status code:", response.status_code)
 
 if response.status_code == 200:
     data = response.json()
-    print(data["content"][0]["text"]) #print(json.dumps(data,indent=2))   
+    print(json.dumps(data,indent=2))   
 
 else:
     print("Error:", response.text)
@@ -128,7 +128,7 @@ body2 = {
 response2= response = requests.post(url, headers=headers, json=body2)
 if response2.status_code == 200:
     data2 = response2.json()
-    print(data2["content"][0]["text"]) #print(json.dumps(data2,indent=2)) #   
+    print(json.dumps(data2,indent=2))
 
 else:
     print("Error:", response2.text)

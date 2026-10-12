@@ -25,11 +25,12 @@ tools = [
                     "enum": ["billing_dispute", "address_change", "plan_upgrade"]
                 },
                 "days_open": {
+                    "description": "number of days the request has been open",
                     "type": "integer",
                     "minimum": 1
                 }
             },
-            "required": ["request_type"]
+            "required": ["request_type", "days_open"]
         }
     },
     {
@@ -39,35 +40,21 @@ tools = [
             "type": "object",
             "properties": {
                 "customer_id": {
-                    "description": "category of customers",
-                    "type": "string"
-                }
-            
-            },
-        "required": ["customer_id"]
-        }
+                    "description": "customer id e.g. CUST-001",
+                    "type": "string"},
+                "years_customer": {
+                    "description": "number of years the customer has been with the company",
+                    "type": "integer",
+                    "minimum": 1}
+                },
+         "required": ["customer_id", "years_customer"]   
+            }        
     }
 ]
 
-body = {
-    "model": "claude-haiku-4-5",
-    "max_tokens": 1000,
-    "tools": tools,
-    "messages": [
-        {"role": "user", "content": "what is the priority level of an address change requet tht has been oopen for 30 days?"}
-    ]
-}
-
-response = requests.post(url, headers=headers, json=body)
-print("status code:", response.status_code)
-
-if response.status_code == 200:
-    data = response.json()
-    print(data["content"][0]["text"]) #print(json.dumps(data,indent=2))   
-
-else:
-    print("Error:", response.text)
-
+messages = [
+    {"role": "user", "content": "Is customer CUST-001 with 6 years of customer relationship a Premium or Enterprise customer, and what priority is a billing dispute open 3 days for them?"}
+]
 
 def get_request_priority(request_type, days_open):
                         if days_open > 30:  
@@ -77,8 +64,8 @@ def get_request_priority(request_type, days_open):
                         else:
                             return {"Priority": "Low"}
 
-def check_customer_tier(customer_id):
-    if customer_id in ["CUST-001", "CUST-002"]:
+def check_customer_tier(customer_id, years_customer):
+    if customer_id in ["CUST-001", "CUST-002"] and years_customer > 5:
         return("Enterprise")
     else:
         return("Standard")
@@ -88,47 +75,39 @@ available_functions = {
     "check_customer_tier": check_customer_tier
 }
 
-if data["stop_reason"] == "tool_use":
-    tool_name = data["content"][0]["name"]
-    tool_input = data["content"][0]["input"]
-    function_to_call = available_functions[tool_name]
-    results = function_to_call(**tool_input)
-    print(results)
-
-
-messages = [
-        *body["messages"]
-    ,
-    {
-        "role":"assistant",
-        "content":data["content"]
-    },
-    {
-        "role":"user",
-        "content": [
-            {
-                "type":"tool_result",
-                "tool_use_id":data["content"][0]["id"],
-                "content": json.dumps(results)
-            }
-        ]
+while True:
+    body = {
+        "model": "claude-haiku-4-5",
+        "max_tokens": 1000,
+        "tools": tools,
+        "messages": messages
     }
 
+    response = requests.post(url, headers=headers, json=body)
+    data = response.json()
+    print(json.dumps(data["content"], indent=2))
 
-]
+    if data["stop_reason"] == "tool_use":
+        tool_results = []                                  
 
+        for block in data["content"]:                    
+            if block["type"] == "tool_use":                
+                tool_name = block["name"]
+                tool_input = block["input"]
+                tool_id = block["id"]                    
+                function_to_call = available_functions[tool_name]
+                results = function_to_call(**tool_input)
+                tool_results.append({
+                    "type": "tool_result",
+                    "tool_use_id": tool_id,
+                    "content": json.dumps(results)
+                })
 
-body2 = {
-    "model": "claude-haiku-4-5",
-    "max_tokens": 1000,
-    "tools": tools,
-    "messages": messages 
-}
+        
+        messages.append({"role": "assistant", "content": data["content"]})
+        messages.append({"role": "user", "content": tool_results})
+    else:
+        print(data["content"][0]["text"])
+        break
 
-response2= response = requests.post(url, headers=headers, json=body2)
-if response2.status_code == 200:
-    data2 = response2.json()
-    print(data2["content"][0]["text"]) #print(json.dumps(data2,indent=2)) #   
-
-else:
-    print("Error:", response2.text)
+                

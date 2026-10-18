@@ -1,0 +1,1069 @@
+{
+  "old": [
+    {
+      "id": 1,
+      "question": "My developers need to ship features faster",
+      "expected": [
+        "AI Coding Agent"
+      ],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "help developers ship software features faster and improve developer productivity",
+          "products": [
+            "DevOps Accelerate",
+            "DevOps Loop",
+            "DevOps Insights",
+            "DevOps Velocity",
+            "Devops Plan"
+          ]
+        }
+      ],
+      "answer": "For a general goal of shipping faster, these three products from IBM's DevOps portfolio fit best:\n\n- **[DevOps Accelerate](https://www.ibm.com/products/urbancode)** automates CI/CD pipelines and deployments across on-premises, cloud and mainframe. That cuts manual steps and errors and speeds up releases. A free trial is available.\n- **[DevOps Loop](https://www.ibm.com/products/devops-loop)** uses AI across the delivery lifecycle, from turning ideas into tasks to generating tests and orchestrating releases. It also gives you real-time visibility into delivery.\n- **[DevOps Velocity](https://www.ibm.com/products/devops-velocity)** analyzes your pipelines and value stream to find bottlenecks. It also orchestrates releases across your existing tools.\n\nIf you tell me where the delays happen (planning, testing, deployment or something else), I can narrow this down. I can also filter for SaaS, on-premises or free-trial options."
+    },
+    {
+      "id": 2,
+      "question": "Our factory machines keep breaking down and we only find out after they fail",
+      "expected": [
+        "Maximo Application Suite"
+      ],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "predict factory machine failures before they happen using predictive maintenance and equipment monitoring",
+          "products": [
+            "SPSS Collaboration and Deployment Services",
+            "Event Automation",
+            "z17",
+            "IBM Cloud Monitoring",
+            "Z OMEGAMON AI JVM"
+          ]
+        }
+      ],
+      "answer": "Two returned products could fit. Neither is a dedicated factory-equipment maintenance product, so you would build the solution on top of them.\n\n- **[Event Automation](https://www.ibm.com/products/event-automation)**: This is the closest fit. It processes equipment data as it streams in. It detects risk factors and anomalies in real time, so you can act before a machine breaks down.\n- **[SPSS Collaboration and Deployment Services](https://www.ibm.com/products/spss-collaboration-deployment-services)**: This is a good complement. You can build, deploy and manage predictive models on your historical machine data. Its listed maintenance use case is for transport fleets, but the approach is the same.\n\nI left out the other results (z17, IBM Cloud Monitoring and Z OMEGAMON AI JVM). They focus on IT and mainframe monitoring, not physical machinery.\n\nI can narrow this down if you tell me whether you need on-premises or SaaS, or a free trial."
+    },
+    {
+      "id": 3,
+      "question": "Sending huge video files to partners overseas takes forever and often fails",
+      "expected": [
+        "Aspera"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "fast, reliable transfer of very large video files to partners overseas",
+          "products": [
+            "Secure File Transfer",
+            "Aspera",
+            "MQ",
+            "webMethods MFT",
+            "Sterling"
+          ]
+        }
+      ],
+      "answer": "For your problem, I'd recommend one product, with a second as an option.\n\n- **[Aspera](https://www.ibm.com/products/aspera)** is built for high-speed transfer of very large files, such as video, over long distances. Its media and entertainment customers use it to send huge video files globally. One of them, DMC, reported 5x faster transfers and reliable delivery to multiple broadcasters.\n\n- **[Secure File Transfer](https://www.ibm.com/products/secure-file-transfer)** (optional) is worth adding if you also need governance. It handles large files with no product-defined size limits. It also adds automated, reliable transfers, partner management, monitoring, and security controls.\n\nIf speed and failed transfers are your main concerns, Aspera alone is probably enough."
+    },
+    {
+      "id": 4,
+      "question": "We want to know when someone is attacking our network",
+      "expected": [
+        "QRadar SIEM",
+        "QRadar"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "detect and alert when someone is attacking our network (network threat detection)",
+          "products": [
+            "App Exchange",
+            "IBM zSecure Detection",
+            "QRadar SIEM",
+            "QRadar EDR",
+            "QRadar"
+          ]
+        }
+      ],
+      "answer": "For detecting network attacks, I'd recommend this:\n\n- **[QRadar SIEM](https://www.ibm.com/products/qradar-siem)**: It collects and correlates security data from across your environment to detect advanced threats. It includes network threat analytics (QRadar NDR), which analyzes network activity in real time and alerts your team to suspicious behavior. It also offers user behavior analytics and threat hunting.\n\nThe broader [QRadar](https://www.ibm.com/products/qradar) suite is also a good fit. It includes real-time network monitoring (NDR) and correlates events across cloud, endpoint, identity, and network sources.\n\nIf you also want to watch laptops and servers for attacks, [QRadar EDR](https://www.ibm.com/products/qradar-edr) adds AI-driven endpoint threat detection. This is optional.\n\nTell me if you need on-premises or SaaS deployment, or a free trial. I can filter the search for that."
+    },
+    {
+      "id": 5,
+      "question": "Our cloud bill keeps growing and our apps are still slow",
+      "expected": [
+        "Turbonomic"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "reduce and optimize growing cloud costs",
+          "products": [
+            "Turbonomic",
+            "Cloud Pak for Applications",
+            "Hybrid Cloud Mesh",
+            "Cloud Object Storage",
+            "App Connect"
+          ]
+        },
+        {
+          "query": "improve slow application performance and monitor application performance",
+          "products": [
+            "IBM Application Performance Analyzer for z/OS",
+            "Db2 Performance Optimization",
+            "IMS Performance Solution Pack zOS",
+            "iDoctor",
+            "OMEGAMON XE on z/VM and Linux"
+          ]
+        }
+      ],
+      "answer": "**Recommendation: [Turbonomic](https://www.ibm.com/products/turbonomic)**\n\nIt covers both problems. It monitors workload demand in real time across public cloud, hybrid and Kubernetes environments. It then automatically right-sizes compute, storage and network resources. That cuts overprovisioning, which drives the bill, and it keeps application performance stable. The Parking Edition can also shut down idle cloud workloads on AWS, Azure and Google Cloud.\n\n**Caveats:**\n- The other performance tools the search returned are mainframe or IBM i specific, such as Application Performance Analyzer for z/OS, Db2 Performance Optimization for z/OS and iDoctor. They don't fit general cloud apps, so I'm not recommending them. If your slow apps run on those platforms, tell me and I'll look further.\n- Turbonomic fixes slowness caused by resource contention or sizing. It won't find code-level bottlenecks. The search didn't return a general-purpose application tracing or APM product, so I can't suggest one here.\n\nIf you tell me which cloud and platforms you use (for example Kubernetes or VMs), I can narrow this down."
+    },
+    {
+      "id": 6,
+      "question": "Our app is slow and we can't figure out which part is causing it",
+      "expected": [
+        "Instana"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "application performance monitoring to identify the cause of a slow application",
+          "products": [
+            "IBM Application Performance Analyzer for z/OS",
+            "Db2 Performance Optimization",
+            "iDoctor",
+            "IMS Performance Solution Pack zOS",
+            "SevOne"
+          ]
+        },
+        {
+          "query": "full-stack observability to trace requests and pinpoint bottlenecks in web or cloud applications",
+          "products": [
+            "IBM Cloud Monitoring",
+            "Runtimes for Business",
+            "IBM Cloud Logs",
+            "SevOne",
+            "Instana"
+          ]
+        }
+      ],
+      "answer": "For a general web or cloud app, I'd start with this one:\n\n- **[Instana](https://www.ibm.com/products/instana)**: It automatically discovers and instruments your applications and infrastructure. It traces requests across the full stack, so you can see which service, dependency, or layer is slowing things down. It's SaaS and has a free trial.\n\nIf you want a second product, you could add **[IBM Cloud Monitoring](https://www.ibm.com/products/cloud-monitoring)**. It's a managed monitoring service with Kubernetes and container observability. It fits if your app runs on IBM Cloud or in containers.\n\nIf your app runs on a specific platform, there are more specialized tools:\n\n- **Mainframe (z/OS):** [IBM Application Performance Analyzer for z/OS](https://www.ibm.com/products/application-performance-analyzer) maps CPU and I/O usage to your source code.\n- **IBM i:** [iDoctor](https://www.ibm.com/products/idoctor) uses wait analysis to find the cause of performance problems.\n\nWhat does your app run on (cloud or containers, mainframe, IBM i, or something else)? Knowing that would let me narrow this down."
+    },
+    {
+      "id": 7,
+      "question": "Employees lose company phones and laptops and we can't lock or track them",
+      "expected": [
+        "MaaS360"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "locate, remotely lock and wipe lost or stolen company mobile phones",
+          "products": [
+            "Trusteer Mobile SDK",
+            "IBM Crypto Anchor Verifier - Overview",
+            "Z Cyber Vault",
+            "MaaS360",
+            "Guardium Discover and Classify"
+          ]
+        },
+        {
+          "query": "track, remotely lock and manage lost or stolen company laptops",
+          "products": [
+            "Websphere Automation",
+            "IBM Cloud Secrets Manager",
+            "SAN768C-6",
+            "IBM Power S1124",
+            "Enterprise Storage Data Resilience Solutions | IBM"
+          ]
+        }
+      ],
+      "answer": "I'd recommend one product:\n\n- **[MaaS360](https://www.ibm.com/products/maas360)**: This unified endpoint management (UEM) platform manages phones, tablets and laptops from a single console. It gives IT visibility and control over company devices and applies security policies to them. That is the capability you need to secure lost devices.\n\nThe search results didn't spell out remote lock, locate or wipe features. Check with IBM that MaaS360 covers those before you commit.\n\nThe other results were poor fits. The laptop-specific search returned nothing relevant. Trusteer Mobile SDK protects mobile apps from risky devices, but it doesn't manage devices."
+    },
+    {
+      "id": 8,
+      "question": "We record thousands of support calls and want them as searchable text",
+      "expected": [
+        "Speech to Text"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "transcribe recorded support calls into searchable text (speech-to-text)",
+          "products": [
+            "Speech Embed Libraries",
+            "Speech to Text",
+            "Text to Speech",
+            "Document Conversion Services",
+            "eInvoicing"
+          ]
+        }
+      ],
+      "answer": "**Recommendation: [Speech to Text](https://www.ibm.com/products/speech-to-text)**\n\nIBM Watson Speech to Text transcribes audio into text through an API. It has models tuned for customer care, and speaker diarization that labels who said what, so agent and caller are separated in each transcript. Its call analytics use case covers mining the transcripts for patterns, complaints and sentiment. The Lite plan includes 500 free minutes a month, which is enough to test it on a sample of your calls. The Plus and Premium plans have unlimited minutes.\n\nThe search results don't show that the product indexes or searches the transcripts. You would store the text in a search tool of your choice.\n\nIf you're an IBM partner building this into your own application, [Speech Embed Libraries](https://www.ibm.com/products/speech-embed-libraries) offers the same engine as containerized libraries."
+    },
+    {
+      "id": 9,
+      "question": "We get paper invoices and someone types the data in by hand",
+      "expected": [
+        "Document Processing",
+        "IBM Datacap"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "automate extraction of data from paper invoices instead of manual data entry",
+          "products": [
+            "Content Analyzer",
+            "Document Processing",
+            "IBM Datacap",
+            "Document Conversion Services",
+            "IBM FileNet Capture"
+          ]
+        }
+      ],
+      "answer": "For automating invoice data entry, I'd start with these two:\n\n- **[IBM Datacap](https://www.ibm.com/products/data-capture-and-imaging)** captures and classifies paper invoices from scanners, email, fax, PDFs and mobile images. It uses machine learning to extract the data, including from invoices with varying layouts. You can run it as SaaS or self-hosted, and it exports to other applications.\n- **[Document Processing](https://www.ibm.com/products/document-processing)** combines AI with low-code tooling to classify and extract information from business documents. It's meant to remove manual document processing, and the low-code tooling should help if you want to build the workflow yourself.\n\nI'd pick one of these rather than both, since they overlap. Datacap is the more established capture tool. Document Processing may suit you better if you want a low-code approach.\n\nThe search results don't list a free trial for either product.\n\nIf you tell me whether you need SaaS or on-premises, and which system the data needs to end up in (for example, your ERP or accounting software), I can narrow this down."
+    },
+    {
+      "id": 10,
+      "question": "Employees have too many passwords and we want one secure login for all our apps",
+      "expected": [
+        "IBM Verify",
+        "Verify Workforce Identity"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "single sign-on so employees use one secure login for all applications instead of many passwords",
+          "products": [
+            "App ID",
+            "Verify Identity Protection",
+            "Verify Identity Access",
+            "Verify Identity Governance",
+            "Verify Workforce Identity"
+          ]
+        }
+      ],
+      "answer": "**Recommendation**\n\n- [Verify Workforce Identity](https://www.ibm.com/products/verify-workforce-identity): This is the best fit because it's built for employee access. It gives staff single sign-on across your apps. It also adds risk-based multifactor authentication and adaptive access, and it automates onboarding and offboarding.\n\n**Alternative**\n\n- [Verify Identity Access](https://www.ibm.com/products/verify-identity-access): Choose this one if you need to run on-premises, in a hybrid setup, or in an air-gapped environment. It adds SSO, MFA, and passkeys to existing and legacy applications.\n\nI didn't recommend App ID. It adds login to apps you build, so it suits customer-facing apps better than employee SSO.\n\nIf you tell me whether you want SaaS or on-premises, I can narrow this down."
+    },
+    {
+      "id": 11,
+      "question": "We have to report our company's carbon emissions",
+      "expected": [
+        "Envizi"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "measure, track and report company carbon emissions",
+          "products": [
+            "Envizi",
+            "Carbon Ledger",
+            "eInvoicing",
+            "OpenPages",
+            "Maximo Application Suite"
+          ]
+        }
+      ],
+      "answer": "I'd recommend one product: **[Envizi](https://www.ibm.com/products/envizi)**.\n\nEnvizi is IBM's sustainability and ESG data platform. It calculates and reports greenhouse gas (GHG) emissions from an auditable base of environmental data. It also supports compliance-focused ESG reporting and tracks progress toward decarbonization targets.\n\nThe other results didn't fit your need. Carbon Ledger is for renewable-fuel traceability, such as biofuels, rather than corporate emissions reporting.\n\nIf you tell me which framework you report under (CSRD, SEC or CDP, for example), I can check whether anything else is relevant. I can also filter for SaaS or on-premises."
+    },
+    {
+      "id": 12,
+      "question": "Our finance team builds the yearly budget in dozens of Excel files",
+      "expected": [
+        "Planning Analytics"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "collaborative budgeting and planning to replace many Excel spreadsheets for finance team's yearly budget",
+          "products": [
+            "Controller",
+            "Planning Analytics",
+            "Mergers and Acquisition Services",
+            "Devops Plan",
+            "IBM Txture"
+          ]
+        }
+      ],
+      "answer": "I recommend one product for this:\n\n- [Planning Analytics](https://www.ibm.com/products/planning-analytics) replaces scattered budget spreadsheets with one governed planning platform built on the TM1 engine. Its Excel add-in lets your team keep working in Excel, but against shared, real-time data. It also offers a free trial.\n\nIBM Controller also came up in the search. It is aimed at financial close and consolidation, not budget creation, so I left it out. It could be worth a look later if consolidation is also a pain point."
+    },
+    {
+      "id": 13,
+      "question": "Managers want dashboards and reports on our sales data",
+      "expected": [
+        "Cognos Analytics"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "dashboards and reports on sales data for managers",
+          "products": [
+            "Mergers and Acquisition Services",
+            "Cognos Analytics",
+            "Cognos Dashboard Embedded",
+            "WebSphere eXtreme Scale | IBM",
+            "Product Master"
+          ]
+        }
+      ],
+      "answer": "I recommend one product: [Cognos Analytics](https://www.ibm.com/products/cognos-analytics). It's a governed business intelligence platform for building interactive dashboards and customized reports. Managers can use it to track KPIs, spot trends and forecast from sales data. It also has self-service features and an AI assistant that can automate report creation. It runs in the cloud, on-premises or in a hybrid setup.\n\nIf you later want dashboards built into your own application, [Cognos Dashboard Embedded](https://www.ibm.com/products/cognos-dashboard-embedded) is a SaaS option for developers. It doesn't look necessary for managers who just need to view reports."
+    },
+    {
+      "id": 14,
+      "question": "Customers keep asking the same questions on our website",
+      "expected": [
+        "Watsonx Assistant"
+      ],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "answer repetitive customer questions on a website automatically with a virtual assistant or chatbot",
+          "products": [
+            "Speech to Text",
+            "Text to Speech",
+            "Speech Embed Libraries",
+            "IBM Cloud products",
+            "Robotic Process Automation"
+          ]
+        },
+        {
+          "query": "conversational AI virtual agent chatbot for website customer support FAQ",
+          "products": [
+            "Speech to Text",
+            "Text to Speech",
+            "Robotic Process Automation",
+            "Business Automation Workflow",
+            "Decision Intelligence"
+          ]
+        }
+      ],
+      "answer": "I couldn't find a close match for a website FAQ chatbot. The catalog search didn't return a dedicated product for one, such as a Watson conversational assistant. These are the nearest options, and each is only a partial fit.\n\n- **[IBM Cloud products](https://www.ibm.com/products/cloud)**: This is the closest match for a website bot. Its listed use cases include building a customer service assistant or a domain-specific chatbot with Watson. It's a broad platform, so you'd be assembling the bot yourself.\n- **[Speech to Text](https://www.ibm.com/products/speech-to-text)** and **[Text to Speech](https://www.ibm.com/products/text-to-speech)**: These only apply if you also want voice self-service. Together they power a Watson virtual assistant that answers common questions over the phone. They don't add a website chat widget.\n\nI wouldn't recommend Robotic Process Automation, Business Automation Workflow or Decision Intelligence. They target back-office automation and decisioning, not customer-facing Q&A.\n\nIf you can tell me whether you want chat, voice or both, and whether you need SaaS or on-premises, I can search again with those filters."
+    },
+    {
+      "id": 15,
+      "question": "I want to advertise my company",
+      "expected": [],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "advertise my company and run advertising campaigns",
+          "products": [
+            "Integration SaaS",
+            "Max Mobile for Enterprise",
+            "Cloud Pak for Applications",
+            "IBM Controller Disclosure Management",
+            "Speech to Text"
+          ]
+        }
+      ],
+      "answer": "IBM's catalog doesn't seem to include a product for advertising your company, such as an ad platform or campaign buying tool. Nothing the search returned is a strong fit.\n\nThere are two loose matches:\n\n- **[Max Mobile for Enterprise](https://www.ibm.com/products/max-mobile-for-enterprise)** helps you reach users across platforms with a mobile experience. It combines weather and traffic data with your own brand content to influence customer behavior. It's a branded mobile channel, not an ad-buying tool.\n- **[Integration SaaS](https://www.ibm.com/products/webmethods-hybrid-integration)** is only useful if you already run marketing tools. It connects your marketing stack and automates campaigns and lead routing. It doesn't create or place ads.\n\nIf you tell me more, I can search again. For example, are you trying to reach customers on mobile, automate email campaigns, analyze customer sentiment, or personalize content? Do you need SaaS or on-premises?"
+    },
+    {
+      "id": 16,
+      "question": "We need a food delivery app for our restaurant",
+      "expected": [],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "food delivery app for a restaurant",
+          "products": [
+            "Order Management",
+            "Intelligent Promising",
+            "SelectStack",
+            "Order Fulfillment Suite",
+            "App Delivery Foundation for Zos"
+          ]
+        }
+      ],
+      "answer": "IBM doesn't appear to have a good fit for this. Nothing the search returned is a food delivery app with customer ordering, menus, driver dispatch, or a restaurant storefront.\n\nThe closest result is [Order Management](https://www.ibm.com/products/order-management) (IBM Sterling). It's an enterprise order fulfillment back end that supports omnichannel orders, curbside pickup, and buy-online-pickup-in-store. It's built for large retailers and isn't a ready-made delivery app. It would only make sense if you're a large multi-location chain building your own ordering platform and need the order-routing layer behind it.\n\nIf you're a single restaurant or a small group, a dedicated restaurant ordering platform, such as an online ordering or delivery service, would suit you better than IBM's catalog.\n\nIf you're building a custom solution, tell me more about your scale and what you need. I can search for IBM products for specific parts, such as integration, AI customer support, or hosting."
+    }
+  ],
+  "new": [
+    {
+      "id": 1,
+      "question": "My developers need to ship features faster",
+      "expected": [
+        "AI Coding Agent"
+      ],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "My developers need to ship features faster",
+          "products": [
+            "DevOps Accelerate",
+            "DevOps Loop",
+            "DevOps Velocity",
+            "DevOps",
+            "IBM Cloud Continuous Delivery",
+            "Cloud Pak for Applications",
+            "DevOps Insights",
+            "Intelligent Promising"
+          ]
+        },
+        {
+          "query": "AI-powered developer productivity and DevOps software delivery automation platform",
+          "products": [
+            "DevOps Loop",
+            "DevOps Velocity",
+            "DevOps Accelerate",
+            "Devops Plan",
+            "Gitlab Ultimate",
+            "DevOps Build | IBM",
+            "DevOps Solution Workbench",
+            "DevOps"
+          ]
+        }
+      ],
+      "answer": "For faster feature delivery, I'd start with these two products:\n\n- **[DevOps Loop](https://www.ibm.com/products/devops-loop)** is an AI-driven platform that covers the delivery lifecycle from idea to release. It generates tasks from ideas, automates testing and pipelines, and shows real-time delivery insights, so developers spend less time on manual work and handoffs.\n- **[DevOps Accelerate](https://www.ibm.com/products/urbancode)** (IBM UrbanCode) automates CI/CD and deployments across on-premises, cloud, and mainframe environments. It cuts manual release steps and errors, and it offers a free trial.\n\nIf your main bottleneck is pipelines spread across many tools, you could also add **[DevOps Velocity](https://www.ibm.com/products/devops-velocity)**. It orchestrates releases and uses analytics to find where work gets stuck.\n\nTo narrow this down, it would help to know where your delivery slows most: planning, testing, or deployment. It would also help to know whether you need on-premises or SaaS."
+    },
+    {
+      "id": 2,
+      "question": "Our factory machines keep breaking down and we only find out after they fail",
+      "expected": [
+        "Maximo Application Suite"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Our factory machines keep breaking down and we only find out after they fail",
+          "products": [
+            "Maximo Application Suite",
+            "PowerHA",
+            "Fault Analyzer for z/OS",
+            "Engineering Lifecycle Management",
+            "IMS Program Restart Facility for z/OS",
+            "Power E1180",
+            "Power VM Recovery Manager",
+            "GDPS"
+          ]
+        },
+        {
+          "query": "predictive maintenance and asset performance management with condition monitoring for manufacturing equipment",
+          "products": [
+            "Maximo Application Suite",
+            "SPSS Collaboration and Deployment Services",
+            "Event Automation",
+            "Decision Optimization",
+            "z17",
+            "Engineering Lifecycle Management",
+            "IMS Performance Solution Pack zOS",
+            "SiView Standard"
+          ]
+        }
+      ],
+      "answer": "For your problem, I'd recommend one product, with an optional second.\n\n**Main recommendation**\n- [Maximo Application Suite](https://www.ibm.com/products/maximo) is IBM's asset management and maintenance platform. It supports condition-based maintenance, which uses real-time sensor and meter data to trigger maintenance from actual machine condition instead of fixed schedules or after a failure. It also has reliability-centered maintenance workflows and a manufacturing focus on reducing downtime. A brewery customer used it to move from schedule-based to proactive, data-led maintenance.\n\n**Optional add-on, if you want custom real-time alerting on equipment data**\n- [Event Automation](https://www.ibm.com/products/event-automation) processes streaming equipment data in real time. It detects anomalies and risk factors so you can act before a breakdown. Its listed use cases include predictive maintenance.\n\nMaximo alone should cover most needs. Add Event Automation only if you need to build your own streaming detection on top of it.\n\nI can narrow this down if you tell me whether you need SaaS or on-premises deployment."
+    },
+    {
+      "id": 3,
+      "question": "Sending huge video files to partners overseas takes forever and often fails",
+      "expected": [
+        "Aspera"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Sending huge video files to partners overseas takes forever and often fails",
+          "products": [
+            "Secure File Transfer",
+            "Aspera",
+            "IBM Storage Networking SAN42B-R7",
+            "MQ",
+            "Sterling",
+            "IBM TS2270",
+            "TS1130",
+            "LTO Tape Drive"
+          ]
+        },
+        {
+          "query": "high-speed large file transfer software for secure global data movement",
+          "products": [
+            "Secure File Transfer",
+            "webMethods MFT",
+            "Aspera",
+            "MQ",
+            "Sterling",
+            "TS1130",
+            "IBM Storage Networking SAN42B-R7",
+            "SAN768C-6"
+          ]
+        }
+      ],
+      "answer": "For your problem, I'd start with Aspera. If you also need managed, audited partner exchanges, add Secure File Transfer.\n\n- [Aspera](https://www.ibm.com/products/aspera) uses IBM's FASP transport technology, which is designed to keep large files moving at full speed over long distances and lossy or congested links. That is the usual cause of slow, failing overseas transfers. Its media and entertainment use cases cover global video distribution. It lists a free trial.\n- [Secure File Transfer](https://www.ibm.com/products/secure-file-transfer) is a managed file transfer platform. It handles partner onboarding, automated and unattended transfers with automatic restart after a failure, encryption, and monitoring. It has no product-defined limits on file size.\n\nIf raw speed and reliability for video are the main issue, Aspera alone may be enough. Secure File Transfer is worth adding if you also want governance and automation across many partners."
+    },
+    {
+      "id": 4,
+      "question": "We want to know when someone is attacking our network",
+      "expected": [
+        "QRadar SIEM",
+        "QRadar"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "We want to know when someone is attacking our network",
+          "products": [
+            "Network Security",
+            "IBM zSecure Detection",
+            "App Exchange",
+            "Network Intelligence",
+            "QRadar SIEM",
+            "Trusteer Rapport",
+            "QRadar EDR",
+            "Network Management Solutions | IBM"
+          ]
+        },
+        {
+          "query": "security information and event management (SIEM) and network threat detection and response",
+          "products": [
+            "QRadar SIEM",
+            "IBM zSecure Detection",
+            "QRadar",
+            "QRadar EDR",
+            "App Exchange",
+            "QRadar SOAR",
+            "IBM Cloud Security and Compliance Center",
+            "On Call Manager"
+          ]
+        }
+      ],
+      "answer": "I'd recommend starting with QRadar SIEM and adding QRadar SOAR if you want help responding.\n\n- **[QRadar SIEM](https://www.ibm.com/products/qradar-siem)** collects security data from across your environment and detects threats in real time. It also includes network threat analytics (Network Detection and Response), which analyzes network activity as it happens. It has about 700 prebuilt integrations, so it can work with the tools you already have.\n- **[QRadar SOAR](https://www.ibm.com/products/qradar-soar)** (optional) automates how you investigate and respond once an attack is detected. It uses playbooks and case management to cut response time and filter out false positives.\n\nIBM's [Network Security](https://www.ibm.com/products/network-security) page covers firewalls and security groups. Those help prevent attacks on IBM Cloud rather than alert you to them, so I left them out of the bundle.\n\nThe search results didn't say whether QRadar SIEM runs on-premises or as SaaS, or whether it has a free trial. Tell me which you need and I can search again with that filter."
+    },
+    {
+      "id": 5,
+      "question": "Our cloud bill keeps growing and our apps are still slow",
+      "expected": [
+        "Turbonomic"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Our cloud bill keeps growing and our apps are still slow",
+          "products": [
+            "App Connect",
+            "Cloud Pak for Applications",
+            "IBM Cloud Satellite",
+            "Cloud Object Storage",
+            "IBM Verify",
+            "Cloud Paks",
+            "API Connect",
+            "NS1 Connect"
+          ]
+        },
+        {
+          "query": "cloud cost optimization and FinOps management",
+          "products": [
+            "Turbonomic",
+            "HashiCorp",
+            "Cloud Pak for Applications",
+            "XL CPP Compiler ZVM",
+            "Watsonx.data",
+            "Spectrum Symphony",
+            "Cloud Pak for Aiops",
+            "App Connect"
+          ]
+        },
+        {
+          "query": "application performance management and resource optimization",
+          "products": [
+            "IBM Application Performance Analyzer for z/OS",
+            "Db2 Performance Optimization",
+            "Turbonomic",
+            "IMS Performance Solution Pack zOS",
+            "Spectrum Symphony",
+            "Z Performance and Capacity Analytics",
+            "IBM Db2 AI for z/OS",
+            "Open xl cpp linux compiler power"
+          ]
+        },
+        {
+          "query": "application observability and monitoring to find the cause of slow application performance",
+          "products": [
+            "IBM Application Performance Analyzer for z/OS",
+            "Db2 Performance Optimization",
+            "IMS Performance Solution Pack zOS",
+            "SevOne",
+            "Runtimes for Business",
+            "iDoctor",
+            "DevOps Insights",
+            "Flexera one"
+          ]
+        }
+      ],
+      "answer": "**Recommendation: start with Turbonomic.** It addresses both of your symptoms.\n\n- **[Turbonomic](https://www.ibm.com/products/turbonomic)** continuously monitors application demand across public cloud, data center and Kubernetes. It automatically right-sizes compute, storage and network resources, which removes overprovisioning (the usual cause of a growing bill) and keeps performance steady. Its Parking Edition can also shut down idle cloud workloads on AWS, Azure and Google Cloud. It has a free trial.\n\n**Optional add-on if your apps are Java or Node.js:**\n\n- **[Runtimes for Business](https://www.ibm.com/products/runtimes-for-business)** gives you supported Java and Node.js runtimes with built-in tracing, metrics and log aggregation. This helps you find the root cause of slowness inside the application code, which resource tuning alone won't fix.\n\n**Gap:** the search didn't return a general-purpose application performance monitoring product for non-mainframe apps. The other performance tools it returned are mainframe-, Db2-for-z/OS- or network-specific, so I left them out. If you tell me your stack (for example Kubernetes, VMs, or a particular cloud), I can narrow this down."
+    },
+    {
+      "id": 6,
+      "question": "Our app is slow and we can't figure out which part is causing it",
+      "expected": [
+        "Instana"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "our app is slow and we can't figure out which part is causing it",
+          "products": [
+            "App Connect",
+            "IBM Cloud App Configuration",
+            "IMS Problem Investigator z/OS",
+            "IBM Application Performance Analyzer for z/OS",
+            "iDoctor",
+            "z/OS Workload Interaction Navigator",
+            "IMS Batch Terminal Simulator",
+            "NS1 Connect"
+          ]
+        },
+        {
+          "query": "application performance monitoring and observability with distributed tracing and root cause analysis",
+          "products": [
+            "SevOne",
+            "IBM Application Performance Analyzer for z/OS",
+            "IMS Performance Solution Pack zOS",
+            "DevOps Insights",
+            "Turbonomic",
+            "Network Management Solutions | IBM",
+            "Istio on IBM Cloud",
+            "IMS Problem Investigator z/OS"
+          ]
+        },
+        {
+          "query": "full-stack application observability and APM that traces requests across services to pinpoint performance bottlenecks",
+          "products": [
+            "Turbonomic",
+            "Runtimes for Business",
+            "IMS Performance Solution Pack zOS",
+            "SevOne",
+            "IBM Application Performance Analyzer for z/OS",
+            "Instana",
+            "Istio on IBM Cloud",
+            "Z Integration for Observability"
+          ]
+        }
+      ],
+      "answer": "For your problem, I'd start with [Instana](https://www.ibm.com/products/instana). It's an observability platform that traces requests and detects issues across the full application stack. It automatically discovers and instruments your applications and infrastructure, so you can see which service, dependency or resource is slowing things down. It's SaaS and has a free trial.\n\nIf the slowdown turns out to be resource contention (for example, over-provisioned or starved containers and VMs), you could add [Turbonomic](https://www.ibm.com/products/turbonomic). It maps dependencies across applications and infrastructure and takes policy-driven actions to keep performance within targets. It's on-premises and has a free trial.\n\nI left out the other results. They were mainframe-specific (IMS and z/OS tools) or focused on networks, delivery pipelines or configuration, so they don't fit a general \"which part of the app is slow\" question.\n\nIf your app runs on a mainframe, or if you need an on-premises option for the tracing part, tell me and I'll search again."
+    },
+    {
+      "id": 7,
+      "question": "Employees lose company phones and laptops and we can't lock or track them",
+      "expected": [
+        "MaaS360"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Employees lose company phones and laptops and we can't lock or track them",
+          "products": [
+            "Storage Defender",
+            "Enterprise Storage Data Resilience Solutions | IBM",
+            "Trusteer Mobile SDK",
+            "Z Cyber Vault",
+            "zOS Change Tracker",
+            "Power E1180",
+            "SAN192C-6",
+            "GDPS"
+          ]
+        },
+        {
+          "query": "unified endpoint management (UEM) for mobile device management with remote lock, wipe, and location tracking",
+          "products": [
+            "MaaS360",
+            "SAN768C-6",
+            "IBM PowerVM",
+            "WebSphere Application Server",
+            "Trusteer Mobile SDK",
+            "Websphere Automation",
+            "SevOne",
+            "IBM zSecure Secret Manager"
+          ]
+        }
+      ],
+      "answer": "**Recommendation: [IBM MaaS360](https://www.ibm.com/products/maas360)**\n\nMaaS360 is a SaaS unified endpoint management (UEM) and mobile device management platform. It manages phones, tablets and laptops across multiple operating systems from one console, with built-in threat protection. That's the category you need for locking and tracking lost devices. It also has a free trial, so you can test it first.\n\nThe search results didn't spell out remote lock, wipe or location tracking as named features. Please confirm those on the product page or in the trial before you commit.\n\nI'm not recommending a bundle. The other results were storage, mainframe or app-security products, and none of them address lost devices."
+    },
+    {
+      "id": 8,
+      "question": "We record thousands of support calls and want them as searchable text",
+      "expected": [
+        "Speech to Text"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "We record thousands of support calls and want them as searchable text",
+          "products": [
+            "Speech to Text",
+            "Speech Embed Libraries",
+            "Text to Speech",
+            "On Call Manager",
+            "IBM Content Manager OnDemand",
+            "Event Notifications",
+            "Humio",
+            "Content Collector for Email"
+          ]
+        },
+        {
+          "query": "speech-to-text transcription service for call center audio recordings",
+          "products": [
+            "Speech to Text",
+            "Text to Speech",
+            "Speech Embed Libraries",
+            "Document Conversion Services",
+            "Content Analyzer",
+            "eInvoicing",
+            "IBM Datacap",
+            "Watsonx Code Assistant for Z"
+          ]
+        },
+        {
+          "query": "enterprise search and content analytics to index and search text documents",
+          "products": [
+            "Docling for IBM watsonx",
+            "IBM Content Cortex | Intelligent Content Platform",
+            "Content Analyzer",
+            "Watson Discovery",
+            "FileNet Content Manager",
+            "InfoSphere Big Match for Hadoop",
+            "InfoSphere Information Server Enterprise Edition",
+            "Databases for Elasticsearch"
+          ]
+        }
+      ],
+      "answer": "For your use case, I'd suggest two products: one to transcribe the calls and one to search the transcripts.\n\n1. **[Speech to Text](https://www.ibm.com/products/speech-to-text)**: This IBM Watson service turns audio into text. It has speech models tuned for customer care and can label who said what (speaker diarization). You can customize it for your domain vocabulary. It runs as SaaS and can also be deployed on-premises or on other clouds. The Lite plan includes 500 free minutes a month, which is enough to test it on a sample of your calls.\n\n2. **[Watson Discovery](https://www.ibm.com/products/watson-discovery)**: Once the calls are text, Discovery indexes them for search. It adds faceted search and NLP enrichments such as entities, keywords and sentiment, so you can search beyond plain keywords. It's SaaS and has a free trial.\n\nThe two products aren't pre-integrated, so you would connect them with a simple pipeline. That pipeline sends each recording to Speech to Text and loads the resulting transcripts into Discovery.\n\nIf you need to keep everything on your own servers, tell me. Speech to Text can be deployed on-premises. The search results above didn't confirm that for Discovery, so I'd search again for that case."
+    },
+    {
+      "id": 9,
+      "question": "We get paper invoices and someone types the data in by hand",
+      "expected": [
+        "Document Processing",
+        "IBM Datacap"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "We get paper invoices and someone types the data in by hand",
+          "products": [
+            "Document Conversion Services",
+            "eInvoicing",
+            "Content Analyzer",
+            "IBM Datacap",
+            "Speech to Text",
+            "IBM Content Cortex | Intelligent Content Platform",
+            "IBM FileNet Capture",
+            "Text to Speech"
+          ]
+        },
+        {
+          "query": "intelligent document processing and data capture to automate invoice extraction with OCR and AI",
+          "products": [
+            "Document Processing",
+            "Content Analyzer",
+            "IBM Datacap",
+            "Document Conversion Services",
+            "IBM Content Cortex | Intelligent Content Platform",
+            "Watson Discovery",
+            "Docling for IBM watsonx",
+            "IBM FileNet Capture"
+          ]
+        }
+      ],
+      "answer": "For paper invoices that are keyed in by hand, I'd start with these two products:\n\n- [IBM Automation Document Processing](https://www.ibm.com/products/document-processing): It uses AI, deep learning and low-code tools to classify documents and extract their data. That replaces most of the manual typing, and it's a general-purpose fit for invoices.\n- [IBM Datacap](https://www.ibm.com/products/data-capture-and-imaging): It captures paper from scanners, email, PDFs and mobile devices. It uses machine learning and OCR to read invoices even when the layouts vary. It then exports the data to your other applications. It's available as SaaS or self-hosted.\n\nIf you also send or receive invoices across countries with e-invoicing tax mandates, [IBM Sterling eInvoicing](https://www.ibm.com/products/einvoicing) could be added later. It handles compliance and archiving, but it doesn't read paper invoices itself.\n\nIs your accounting or ERP system IBM FileNet or another platform? Do you need SaaS or on-premises? Either answer would help me narrow this down."
+    },
+    {
+      "id": 10,
+      "question": "Employees have too many passwords and we want one secure login for all our apps",
+      "expected": [
+        "IBM Verify",
+        "Verify Workforce Identity"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Employees have too many passwords and we want one secure login for all our apps",
+          "products": [
+            "App ID",
+            "Verify Identity Access",
+            "IBM Cloud Secrets Manager",
+            "Application Gateway",
+            "Verify Workforce Identity",
+            "IBM Verify Privileged Identity",
+            "Verify Directory",
+            "Verify Trust"
+          ]
+        },
+        {
+          "query": "single sign-on and identity and access management with multi-factor authentication",
+          "products": [
+            "Verify Identity Governance",
+            "Verify Workforce Identity",
+            "Verify Identity Protection",
+            "Verify Directory",
+            "Verify for Government",
+            "App ID",
+            "Verify Trust",
+            "Verify Identity Access"
+          ]
+        }
+      ],
+      "answer": "For employee single sign-on (SSO), I'd start with one product and add a second only if you have legacy apps.\n\n**Recommended**\n- [Verify Workforce Identity](https://www.ibm.com/products/verify-workforce-identity): This is IBM's workforce IAM offering for employees. It gives them one login (SSO) across your apps, with multifactor authentication and adaptive, risk-based access. It also automates onboarding and offboarding. The listing says a free trial is available.\n\n**Optional add-on**\n- [Application Gateway](https://www.ibm.com/products/application-gateway): This is a lightweight reverse proxy. It brings SSO and modern login, including passkeys, to legacy or on-premises web apps without code changes. It works with IBM Verify and other major identity providers such as Okta and Microsoft Entra ID.\n\n**If you need to run it on-premises or in a hybrid setup**\n- [Verify Identity Access](https://www.ibm.com/products/verify-identity-access) is an alternative to Verify Workforce Identity. It adds SSO, MFA and passkeys to existing apps, and it can be deployed on-premises, in private or public cloud, or in a hybrid mix.\n\nDo you need SaaS, on-premises or hybrid? Do you have many legacy apps? Your answers would let me narrow this to one product."
+    },
+    {
+      "id": 11,
+      "question": "We have to report our company's carbon emissions",
+      "expected": [
+        "Envizi"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "We have to report our company's carbon emissions",
+          "products": [
+            "Envizi",
+            "Carbon Ledger",
+            "eInvoicing",
+            "Engineering Lifecycle Management",
+            "Power",
+            "IBM Engineering Test Management",
+            "Maximo Application Suite",
+            "OpenPages"
+          ]
+        },
+        {
+          "query": "ESG sustainability reporting and greenhouse gas emissions tracking and management software",
+          "products": [
+            "Envizi",
+            "Planning Analytics",
+            "Carbon Ledger",
+            "DevOps Velocity",
+            "OpenPages",
+            "Cognos Dashboard Embedded",
+            "Engineering Lifecycle Management",
+            "eInvoicing"
+          ]
+        }
+      ],
+      "answer": "I'd recommend one product:\n\n- [Envizi](https://www.ibm.com/products/envizi): This is IBM's SaaS sustainability data management platform. It calculates Scope 1, 2 and 3 greenhouse gas emissions using the GHG Protocol. It also ingests ESG data automatically and produces auditable reports for climate disclosure requirements.\n\nIf you also need to plan and simulate sustainability targets, [Planning Analytics](https://www.ibm.com/products/planning-analytics) has an ESG and sustainability performance use case. You'd only need it for forecasting and scenario modeling. Envizi covers the reporting itself.\n\nThe search results don't list a free trial for Envizi."
+    },
+    {
+      "id": 12,
+      "question": "Our finance team builds the yearly budget in dozens of Excel files",
+      "expected": [
+        "Planning Analytics"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Our finance team builds the yearly budget in dozens of Excel files",
+          "products": [
+            "Controller",
+            "Planning Analytics",
+            "IBM Controller Disclosure Management",
+            "IBM Content Cortex | Intelligent Content Platform",
+            "Turbonomic",
+            "Maximo Application Suite",
+            "Cognos Analytics",
+            "Information Governance Catalog"
+          ]
+        },
+        {
+          "query": "financial planning and budgeting software, corporate performance management, planning and forecasting",
+          "products": [
+            "Planning Analytics",
+            "Controller",
+            "Decision Optimization",
+            "Cognos Analytics",
+            "OpenPages",
+            "SQL Data Insights Pro",
+            "Z Performance and Capacity Analytics",
+            "Maximo Application Suite"
+          ]
+        }
+      ],
+      "answer": "My top recommendation is Planning Analytics. Controller and Cognos Analytics are optional additions.\n\n- **[Planning Analytics](https://www.ibm.com/products/planning-analytics)**: This is a budgeting, planning and forecasting platform built on the TM1 database. It replaces many separate spreadsheet models with one governed model. Your team can keep working in Excel through its Excel add-in, and it also has a web interface and a SaaS option.\n- **[Controller](https://www.ibm.com/products/controller)** (optional): Add this if you also need to consolidate and report on actuals. It covers financial close, consolidation and reporting in one auditable tool, and it integrates with Planning Analytics.\n- **[Cognos Analytics](https://www.ibm.com/products/cognos-analytics)** (optional): Add this if you want dashboards and self-service reporting on the budget data.\n\nIf you only want to fix the budgeting process, Planning Analytics on its own should be enough. I can narrow this down if you tell me whether you need SaaS or on-premises."
+    },
+    {
+      "id": 13,
+      "question": "Managers want dashboards and reports on our sales data",
+      "expected": [
+        "Cognos Analytics"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Managers want dashboards and reports on our sales data",
+          "products": [
+            "WebSphere eXtreme Scale | IBM",
+            "Mergers and Acquisition Services",
+            "Cognos Analytics",
+            "Cognos Dashboard Embedded",
+            "IBM Engineering Workflow Management",
+            "InfoSphere Master Data Management Reference Data Management Hub",
+            "Product Master",
+            "eInvoicing"
+          ]
+        },
+        {
+          "query": "business intelligence platform for interactive dashboards, reporting and data visualization",
+          "products": [
+            "Cognos Analytics",
+            "Mergers and Acquisition Services",
+            "InfoSphere Information Server Enterprise Edition",
+            "Cognos Dashboard Embedded",
+            "watsonx BI",
+            "BigIntegrate",
+            "Watsonx.data Intelligence",
+            "z/OS Workload Interaction Navigator"
+          ]
+        }
+      ],
+      "answer": "For dashboards and reports on your sales data, I'd recommend one product, with an optional second.\n\n- **[Cognos Analytics](https://www.ibm.com/products/cognos-analytics)**: This is IBM's governed business intelligence platform. Managers can build and share customized reports, interactive dashboards and KPI tracking on sales data. It also has AI-assisted insights and forecasting. It runs as SaaS, on-premises or hybrid, and the SaaS version has a free trial.\n- **[watsonx BI](https://www.ibm.com/products/watsonx-bi)** (optional add-on): Managers can ask questions about their data in plain language and get answers, instead of opening a dashboard. It suits managers who want quick answers beyond fixed dashboards.\n\nCognos Analytics alone should cover what you described. Tell me if you need on-premises only or a free trial, and I can narrow the options."
+    },
+    {
+      "id": 14,
+      "question": "Customers keep asking the same questions on our website",
+      "expected": [
+        "Watsonx Assistant"
+      ],
+      "retrieved": true,
+      "recommended": true,
+      "searches": [
+        {
+          "query": "Customers keep asking the same questions on our website",
+          "products": [
+            "Speech to Text",
+            "Text to Speech",
+            "Speech Embed Libraries",
+            "Natural Language Understanding",
+            "Configure, Price, Quote",
+            "SQL Data Insights Pro",
+            "DevOps Loop",
+            "Trusteer Rapport"
+          ]
+        },
+        {
+          "query": "AI virtual assistant chatbot for customer self-service and automated answers to frequently asked questions",
+          "products": [
+            "Speech to Text",
+            "Text to Speech",
+            "Speech Embed Libraries",
+            "IBM Cloud products",
+            "Robotic Process Automation",
+            "watsonx Assistant for Z",
+            "Cognos Analytics",
+            "Watsonx Code Assistant for Z"
+          ]
+        },
+        {
+          "query": "conversational AI platform to build virtual agents that answer customer questions on websites",
+          "products": [
+            "Speech to Text",
+            "Text to Speech",
+            "watsonx BI",
+            "Speech Embed Libraries",
+            "Network Intelligence",
+            "IBM Cloud products",
+            "Watsonx Assistant",
+            "watsonx Orchestrate"
+          ]
+        }
+      ],
+      "answer": "For repeated website questions, I'd recommend a virtual assistant (chatbot) that answers them automatically.\n\n**Primary recommendation**\n- [Watsonx Assistant](https://www.ibm.com/products/watson-assistant): IBM describes it as giving customers \"fast, consistent and accurate answers across any application, device or channel.\" You can use it to put an assistant on your website that handles your most common questions. That frees your support team for harder issues.\n\n**Optional add-on, only if you also want voice support**\n- [Speech to Text](https://www.ibm.com/products/speech-to-text): This adds a Watson-powered virtual assistant on the phone for common call-center queries. It has a Lite plan with 500 free minutes a month, so you can try it cheaply.\n\nThe Watsonx Assistant product page returned mostly general \"AI agent\" content. It said little about website chat specifically, so confirm the website-chat capabilities with IBM before you commit. If you only need website chat, Watsonx Assistant on its own should be enough."
+    },
+    {
+      "id": 15,
+      "question": "I want to advertise my company",
+      "expected": [],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "I want to advertise my company",
+          "products": [
+            "OpenPages",
+            "Intelligent Promising",
+            "IBM Bob",
+            "Speech to Text",
+            "Max Mobile for Enterprise",
+            "Integration SaaS",
+            "Text to Speech",
+            "Cloud Pak for Applications"
+          ]
+        },
+        {
+          "query": "digital advertising and marketing campaign optimization platform",
+          "products": [
+            "Intelligent Promising",
+            "Decision Optimization",
+            "Video Streaming",
+            "SPSS Modeler",
+            "Decision Optimization Center",
+            "SPSS",
+            "SPSS Statistics",
+            "ILOG CPLEX Optimization Studio"
+          ]
+        }
+      ],
+      "answer": "IBM doesn't sell an advertising service or ad-buying platform, and nothing the search returned is a direct fit for advertising your company. A few products could support your marketing, depending on what you mean:\n\n- **[SPSS Statistics](https://www.ibm.com/products/spss-statistics)**: Helps you segment audiences, predict campaign performance and target the customer groups most likely to respond. It's useful if you already advertise and want better targeting and ROI.\n- **[Video Streaming](https://www.ibm.com/products/video-streaming)**: A cloud platform for live and on-demand video with a branded portal. It suits product launches and virtual events, where you host the content yourself.\n- **[Max Mobile for Enterprise](https://www.ibm.com/products/max-mobile-for-enterprise)**: Combines weather and traffic data with your own brand content in a mobile experience. It's a narrower option, for reaching users through a mobile app.\n\nTo narrow this down, it would help to know:\n- Who your audience is.\n- Which channels you have in mind, such as video, mobile or email.\n- Whether you need to place ads or analyze your existing marketing."
+    },
+    {
+      "id": 16,
+      "question": "We need a food delivery app for our restaurant",
+      "expected": [],
+      "retrieved": false,
+      "recommended": false,
+      "searches": [
+        {
+          "query": "We need a food delivery app for our restaurant",
+          "products": [
+            "Order Management",
+            "Intelligent Promising",
+            "SelectStack",
+            "Gitlab Ultimate",
+            "Order Fulfillment Suite",
+            "Partner Engagement Manager",
+            "DevOps Loop",
+            "IBM Crypto Anchor Verifier - Overview"
+          ]
+        },
+        {
+          "query": "application development platform for building mobile and web apps with order management and integration",
+          "products": [
+            "App Connect",
+            "Integration SaaS",
+            "Order Fulfillment Suite",
+            "Enterprise Application Runtimes",
+            "Order Management",
+            "Cockroach Labs and IBM",
+            "RAD for WebSphere Software",
+            "Runtimes for Business"
+          ]
+        }
+      ],
+      "answer": "IBM doesn't appear to sell a ready-made food delivery app or an ordering platform for restaurants. The search returned enterprise software, not a product for a single restaurant. I wouldn't force a recommendation.\n\nTwo products are partly relevant, but only if you're building a custom solution at larger scale, such as a multi-location chain:\n\n- [Order Management](https://www.ibm.com/products/order-management) (IBM Sterling) is a back-end system for omnichannel orders. It covers pickup and ship-from-store fulfillment. It is built for retailers, not for a restaurant's customer-facing app, so it's probably overkill for one restaurant.\n- [App Connect](https://www.ibm.com/products/app-connect) is a no-code and low-code integration tool with more than 200 prebuilt connectors. It could link a custom app to your point-of-sale, payment and delivery systems.\n\nFor a single restaurant, a restaurant-focused ordering platform, or a developer who builds a custom app, will likely suit you better than IBM.\n\nIf you're a larger chain building your own app and need the back-end order and integration layer, tell me more. I can narrow the search with your size, whether you want SaaS or on-premises, and your existing systems."
+    }
+  ]
+}

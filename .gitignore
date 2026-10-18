@@ -4,3 +4,4 @@ venv/
 __pycache__/
 *.pyc
 *.pdf
+chroma_db/

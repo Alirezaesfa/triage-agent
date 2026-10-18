@@ -11,17 +11,20 @@ def home():
 
 @app.route("/ask", methods=["POST"])
 def ask():
-    question = request.get_json().get("question", "").strip()
+    data = request.get_json()
+    question = data.get("question", "").strip()
+    history = data.get("history", [])
+
     if not question:
-        return jsonify({"answer": "Please describe your problem."})
+        return jsonify({"answer": "Please describe your problem.", "follow_up": False})
 
     try:
-        answer = ask_products(question)
+        answer, follow_up = ask_products(question, history)
     except Exception as error:
         print("Error while answering:", error)
-        return jsonify({"answer": "Something went wrong. Check the terminal running server.py."})
+        return jsonify({"answer": "Something went wrong. Check the terminal running server.py.", "follow_up": False})
 
-    return jsonify({"answer": answer})
+    return jsonify({"answer": answer, "follow_up": follow_up})
 
 
 if __name__ == "__main__":

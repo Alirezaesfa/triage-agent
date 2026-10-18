@@ -6,7 +6,7 @@ from load_ibm_into_chroma import get_collection, load, find_products
 load_dotenv()
 
 client = anthropic.Anthropic()
-
+FOLLOW_UP_MARKER = "[[FOLLOW_UP]]"
 collection = get_collection()
 if collection.count() == 0:
     print("Database is empty, loading the product chunks (first run only)...")
@@ -27,6 +27,9 @@ SYSTEM_PROMPT = (
     "(for example, do not lead with a mainframe-only product unless the user mentions mainframes). "
     "For each product, give its name as a markdown link to its URL and one or two sentences on how it addresses the user's problem. "
     "If nothing returned is a good fit, say so honestly instead of forcing a recommendation. "
+    "If your reply asks the user any question, put the exact text [[FOLLOW_UP]] on its own line at the very end of your reply. "
+    "If your reply asks no question, do not include it. "
+    "When the user replies to your questions, combine their answers with their earlier messages before searching again. "
     "Be concise."
 )
 
@@ -96,10 +99,14 @@ available_functions = {
 }
 
 
-def ask_products(question):
-    messages = [
-        {"role": "user", "content": question}
-    ]
+def ask_products(question, history=None):
+    if history is None:
+        history = []
+
+    messages = []
+    for old in history[-10:]:
+        messages.append({"role": old["role"], "content": old["content"]})
+    messages.append({"role": "user", "content": question})
 
     for turn in range(8):
         response = client.messages.create(
@@ -133,10 +140,14 @@ def ask_products(question):
             for block in response.content:
                 if block.type == "text":
                     answer = answer + block.text
-            return answer
 
-    return "Sorry, I could not finish answering that. Please try rephrasing your question."
+            asked_follow_up = FOLLOW_UP_MARKER in answer
+            answer = answer.replace(FOLLOW_UP_MARKER, "").strip()
+            return answer, asked_follow_up
 
+    return "Sorry, I could not finish answering that. Please try rephrasing your question.", False
 
 if __name__ == "__main__":
-    print(ask_products("Our support team gets thousands of emails a week and we want to understand what customers are unhappy about. It has to run on our own servers."))
+    answer, follow_up = ask_products("I want to advertise my company")
+    print(answer)
+    print("\nAsked a follow-up question:", follow_up)

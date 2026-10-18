@@ -18,6 +18,7 @@
     #question-shown { margin-top: 28px; color: #525252; font-style: italic; }
     #answer { margin-top: 12px; line-height: 1.6; }
     #answer a { color: #0f62fe; }
+    #memory-note { margin-top: 20px; padding: 12px 14px; background: #edf5ff; border-left: 4px solid #0f62fe; color: #161616; font-size: 15px; }
   </style>
 </head>
 <body>
@@ -33,6 +34,9 @@
 
   <div id="question-shown"></div>
   <div id="answer"></div>
+  <div id="memory-note" hidden>
+    Don't worry about your previous message. It's stored in my memory, together with my questions, so just type your answers above.
+  </div>
 
   <script>
     const form = document.getElementById("form");
@@ -40,6 +44,10 @@
     const button = document.getElementById("send");
     const questionShown = document.getElementById("question-shown");
     const answer = document.getElementById("answer");
+    const memoryNote = document.getElementById("memory-note");
+
+    // Holds the conversation only while Claude is waiting for answers to its questions.
+    let history = [];
 
     function showAnswer(text) {
       if (window.marked && window.DOMPurify) {
@@ -58,16 +66,26 @@
       input.value = "";
       questionShown.textContent = question;
       answer.textContent = "Searching the catalog...";
+      memoryNote.hidden = true;
       button.disabled = true;
 
       try {
         const res = await fetch("/ask", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ question })
+          body: JSON.stringify({ question: question, history: history })
         });
         const data = await res.json();
-        showAnswer(data.answer || "Something went wrong.");
+        const text = data.answer || "Something went wrong.";
+        showAnswer(text);
+
+        if (data.follow_up) {
+          history.push({ role: "user", content: question });
+          history.push({ role: "assistant", content: text });
+          memoryNote.hidden = false;
+        } else {
+          history = [];
+        }
       } catch (err) {
         answer.textContent = "Could not reach the server. Is server.py running?";
       }
